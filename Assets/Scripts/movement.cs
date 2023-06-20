@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class movement : MonoBehaviour
+
 {
     AudioSource boost;
     Rigidbody rb;
+    [SerializeField] AudioClip Engine;
+    
     [SerializeField] float mainThrust = 100f;
     [SerializeField] float rotateThrust = 100f;
 
@@ -31,7 +34,7 @@ public class movement : MonoBehaviour
 
             if(!boost.isPlaying)
             {
-                boost.Play();
+                boost.PlayOneShot(Engine);
             
             }       
                  
@@ -67,3 +70,4 @@ public class movement : MonoBehaviour
     }
 
 }
+
