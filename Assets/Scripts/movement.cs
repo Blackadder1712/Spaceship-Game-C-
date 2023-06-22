@@ -53,12 +53,12 @@ public class movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.A))
         {
-           ApplyRotation(rotateThrust);
+           ApplyRotation(-rotateThrust);
         }
 
          else if(Input.GetKey(KeyCode.D))  //not going left and right at same time
         {
-           ApplyRotation(-rotateThrust);
+           ApplyRotation(rotateThrust);
         }
     }
 
