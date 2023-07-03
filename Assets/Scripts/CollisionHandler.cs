@@ -6,8 +6,11 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float levelLoadDelay = 2f;
     [SerializeField] AudioClip Explode;
     [SerializeField] AudioClip Win;
-     AudioSource bang;
-     AudioSource Complete;
+     AudioSource bang; // fail sound 
+     AudioSource Complete; // success sound
+
+    [SerializeField] ParticleSystem ExplodeParticles; //explosion effects 
+    [SerializeField] ParticleSystem WinParticles;
 
     bool isTransitioning = false;//stop audio on collision/explosion (true/false)
 
@@ -18,7 +21,7 @@ public class CollisionHandler : MonoBehaviour
     }
     void OnCollisionEnter(Collision other) 
     {
-        if(!isTransitioning) //only if sounds not already active 
+            if(!isTransitioning) //only if sounds not already active 
         {
             
             switch (other.gameObject.tag)
@@ -27,13 +30,13 @@ public class CollisionHandler : MonoBehaviour
                     Debug.Log("This thing is friendly");
                     break;
                 case "Finish":
-                    Debug.Log("Congrats, yo, you finished!");
-                    Complete.PlayOneShot(Win);
-                    StartNextLevel();
-                    break;
+                      Debug.Log("Congrats, yo, you finished!");
+                        Complete.PlayOneShot(Win);
+                        StartNextLevel();
+                        break;
                 case "Fuel":
-                    Debug.Log("You picked up fuel");
-                    break;
+                     Debug.Log("You picked up fuel");
+                     break;
                 default:
                     Debug.Log("Sorry, you blew up!");
                     StartCrashSequence();// 1 sec delay
@@ -42,27 +45,34 @@ public class CollisionHandler : MonoBehaviour
             }
 
         }   
-
     }
+
+   
+
+
+    void StartNextLevel()
+    {
+        isTransitioning = true;
+        Complete.Stop(); //stop all audio on page load
+        Complete.PlayOneShot(Win);
+        WinParticles.Play();
+         GetComponent<movement>().enabled = false;
+        Invoke("NextLevel", levelLoadDelay);
+    }
+
 
     void StartCrashSequence()
     {
         isTransitioning = true;
         bang.Stop();//stop after crash
         bang.PlayOneShot(Explode);
+        ExplodeParticles.Play();
         GetComponent<movement>().enabled = false;//remove control
          Invoke("ReloadLevel", levelLoadDelay);
 
     }
 
-    void ReloadLevel()//reloads level on fail 
-    {
-       
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//return index of current scene
-    }
-
-    void NextLevel()
+        void NextLevel()
     {
          int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
          int nextSceneIndex = currentSceneIndex + 1;
@@ -75,12 +85,13 @@ public class CollisionHandler : MonoBehaviour
 
     }
 
-    void StartNextLevel()
+    void ReloadLevel()//reloads level on fail 
     {
-        isTransitioning = true;
-        Complete.Stop(); //stop all audio on page load
-        Complete.PlayOneShot(Win);
-         GetComponent<movement>().enabled = false;
-        Invoke("NextLevel", levelLoadDelay);
+       
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//return index of current scene
     }
+
+
+
 }
