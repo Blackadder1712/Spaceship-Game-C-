@@ -13,6 +13,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem WinParticles;
 
     bool isTransitioning = false;//stop audio on collision/explosion (true/false)
+    bool collisionDisable = false; // turn collidors on and off 
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class CollisionHandler : MonoBehaviour
     }
     void OnCollisionEnter(Collision other) 
     {
-            if(!isTransitioning) //only if sounds not already active 
+            if(isTransitioning || collisionDisable  ) {return;} //only if sounds not already active 
         {
             
             switch (other.gameObject.tag)
@@ -46,6 +47,10 @@ public class CollisionHandler : MonoBehaviour
 
         }   
     }
+
+    
+
+  
 
    
 
@@ -91,7 +96,19 @@ public class CollisionHandler : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//return index of current scene
     }
+    
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            NextLevel();
+        }
 
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisable = !collisionDisable; //toggle collision
+        }
+    }
 
 
 }
