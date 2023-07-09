@@ -9,7 +9,7 @@ public class movement : MonoBehaviour
     Rigidbody rb;
     [SerializeField] AudioClip Engine;
     
-    [SerializeField] float mainThrust = 100f;
+    [SerializeField] float mainThrust = 350f;
     [SerializeField] float rotateThrust = 100f;
 
     
@@ -57,12 +57,12 @@ public class movement : MonoBehaviour
 
         void Rotate() //when you press A
     {
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
            PressA();
 
         }
-            else if(Input.GetKey(KeyCode.D))  //not going left and right at same time
+            else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))  //not going left and right at same time
         {
            PressD();
         }

@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/fly over.unity
+    path: Assets/Scenes/freddy.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/fuel 1.unity
+    path: Assets/Scenes/golden.unity
     guid: 468646c346dc18648a5642f6d797c5f7
+  - enabled: 1
+    path: Assets/Scenes/foxy.unity
+    guid: 716532adbd4ee3a478dcf239b552202a
+  - enabled: 1
+    path: Assets/Scenes/bonnie.unity
+    guid: 6c8b2e8e356f95942b8d8fb0174ecd66
+  - enabled: 1
+    path: Assets/Scenes/chica.unity
+    guid: b9be30ec646d8414b8a763af67110ca5
   m_configObjects: {}
