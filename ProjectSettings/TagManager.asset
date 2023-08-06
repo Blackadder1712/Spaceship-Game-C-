@@ -4,14 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - land
+  - Enemy
+  - asteroid
+  - SpawnAtRunTime
+  - pizza
   - friendly
-  - Fuel
   - Friendly
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post-processing
   - Water
   - UI
   - 
