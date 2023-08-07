@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 57824853e29a48845b18f438267059e3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - crashed: {fileID: 198204746014789312, guid: ab79a37535b979f48b6de56e3a0a5cb0, type: 3}
+  - hand: {instanceID: 0}
+  - boddy: {instanceID: 0}
+  - boddybelt: {instanceID: 0}
+  - head: {instanceID: 0}
+  - nozzle: {instanceID: 0}
+  - nute: {instanceID: 0}
+  - win: {instanceID: 0}
+  - mask: {instanceID: 0}
+  - winOne: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

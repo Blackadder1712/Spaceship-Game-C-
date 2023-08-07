@@ -11,6 +11,8 @@ TagManager:
   - pizza
   - friendly
   - Friendly
+  - Fuel
+  - Path
   layers:
   - Default
   - TransparentFX
