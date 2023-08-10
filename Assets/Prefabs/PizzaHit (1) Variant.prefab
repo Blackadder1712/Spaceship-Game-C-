@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6129839735574152380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 87.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 87.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 87.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 140.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 43.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72141093
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6925073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -87.658
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708521865875693932, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709532885676893744, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_Name
+      value: PizzaHit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709532885676893744, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+      propertyPath: m_TagString
+      value: Fuel
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3709106820331851515, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+--- !u!1 &7380124640542089868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3709532885676893744, guid: 3b4d5b9723ca6af47ad33df2d26c5321, type: 3}
+  m_PrefabInstance: {fileID: 6129839735574152380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1394366450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380124640542089868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54f5d63b57e674459de29e529976d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pizza: 1
+  player: {fileID: 0}

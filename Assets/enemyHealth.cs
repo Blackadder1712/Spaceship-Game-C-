@@ -6,10 +6,17 @@ public class enemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHitPoints = 5;
     [SerializeField] int currentHitPoints = 0; //store hit points 
+
+    Enemy enemy;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable() // fresh hitpoints 
     {
         currentHitPoints = maxHitPoints;
+    }
+
+    void Start()
+    {
+        enemy = GetComponent<Enemy>(); // access enemy 
     }
 
     void OnParticleCollision(GameObject other)//when shot hits enemy
@@ -24,8 +31,8 @@ public class enemyHealth : MonoBehaviour
 
         if(currentHitPoints <= 0) //enemy dies when points hit 0
         {
-            Destroy(gameObject);
-     
+            gameObject.SetActive(false);
+            enemy.RewardPizza(); //if enemy killed reward player pizzapoints
         }
     }
 }

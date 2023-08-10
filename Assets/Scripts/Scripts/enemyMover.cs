@@ -6,11 +6,16 @@ public class enemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();// array of waypoints
     [SerializeField] [Range(0f, 5f)]float speed = 1f; //adjust enemy speed within limits
-
-    void Start()
+    Enemy enemy; // access enemy 
+    void OnEnable()//call everytime enemy is called
     {   
         FindPath();   
+        ReturnToStart();
         StartCoroutine(FollowPath()); //start timed event 
+    }
+    void Start()
+    {
+        enemy = GetComponent<Enemy>();
     }
 
     void FindPath()
@@ -28,6 +33,7 @@ public class enemyMover : MonoBehaviour
 
     void ReturnToStart()
     {
+      
         transform.position = path[0].transform.position;
     }
 
@@ -52,7 +58,9 @@ public class enemyMover : MonoBehaviour
             }
            
         }
-         Destroy(gameObject);
+
+        enemy.StealPizza(); //if enemy reaches end steal pizza 
+        gameObject.SetActive(false); // remove enemy from hierachy 
     }
 
    

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] GameObject turret;
+    [SerializeField] Tower towerPrefab;//connect to tower script/object
+   
     [SerializeField] bool isPlacable; // only place on land/ unoccupied tile
 
     public bool IsPlacable{get{ return isPlacable;}} //return variable
@@ -12,11 +13,11 @@ public class Waypoint : MonoBehaviour
   
     void OnMouseDown()//if hovering
     {
-        if(isPlacable)
+        if(isPlacable) //if tower can be placed set bool to true 
         {
-           
-                Instantiate(turret, transform.position, Quaternion.identity);//place turret 
-                isPlacable = false;
+               
+                bool isPlaced = towerPrefab.CreateTower(towerPrefab, transform.position); //get the position of the tower and initiate method 
+                isPlacable = !isPlaced;//tiles not blocked if turret cant be placed
                         
         }
        
