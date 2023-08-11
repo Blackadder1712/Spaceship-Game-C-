@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[RequireComponent(typeof(TextMeshPro))] //auto add text mesh pro elements 
+
 [ExecuteAlways] //in play and edit mode 
 public class Coordinates : MonoBehaviour
 {
@@ -29,7 +31,7 @@ public class Coordinates : MonoBehaviour
           UpdateObjectName();//give tile coordinate name 
         }
 
-        ColorCoordinates();
+        SetLabelColor();
         toggleLabels();
         
     }
@@ -42,7 +44,7 @@ public class Coordinates : MonoBehaviour
         }
     }
 
-    void ColorCoordinates()
+    void SetLabelColor()
     {
         if(waypoint.IsPlacable) //if IsPlacable = true
         {

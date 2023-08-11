@@ -87,7 +87,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitPoints: 5
-  currentHitPoints: 0
+  difficultyRamp: 1
+  enemyBalance: {fileID: 4803426816615484229, guid: 0e7f465506a7a5043bd08e4dc45fb62a, type: 3}
 --- !u!114 &-3105717649221738049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c74c3065b11874cae5f5e8d59b06c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pizzaReward: 25
+  pizzaPenalty: 25
 --- !u!1001 &2007133282372842610
 PrefabInstance:
   m_ObjectHideFlags: 0

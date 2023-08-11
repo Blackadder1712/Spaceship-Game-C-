@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))] //auto add enemy scripts 
+
 public class enemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();// array of waypoints
@@ -20,7 +22,7 @@ public class enemyMover : MonoBehaviour
 
     void FindPath()
     {
-        path.Clear();
+        path.Clear();//ready for new path
 
         GameObject parent = GameObject.FindGameObjectWithTag("Path");//put objects with path tag in array
 
@@ -37,7 +39,11 @@ public class enemyMover : MonoBehaviour
         transform.position = path[0].transform.position;
     }
 
-   
+    void FinishPath()
+    {      
+        enemy.StealPizza(); //if enemy reaches end steal pizza 
+        gameObject.SetActive(false); // remove enemy from hierachy 
+    }
 
     IEnumerator FollowPath() //returns countable value
     {
@@ -59,8 +65,8 @@ public class enemyMover : MonoBehaviour
            
         }
 
-        enemy.StealPizza(); //if enemy reaches end steal pizza 
-        gameObject.SetActive(false); // remove enemy from hierachy 
+        FinishPath();
+
     }
 
    
