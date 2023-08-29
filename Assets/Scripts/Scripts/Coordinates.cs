@@ -18,7 +18,7 @@ public class Coordinates : MonoBehaviour
     void Awake()
     {
         label = GetComponent<TextMeshPro>(); // get text 
-        label.enabled = true;
+        label.enabled = false;
         waypoint = GetComponentInParent<Waypoint>();
         DisplayCoordinates();//displays coordinates within class/label
     }
@@ -29,6 +29,7 @@ public class Coordinates : MonoBehaviour
         {
           DisplayCoordinates();//displays coordinates within class/label
           UpdateObjectName();//give tile coordinate name 
+          label.enabled = true;
         }
 
         SetLabelColor();

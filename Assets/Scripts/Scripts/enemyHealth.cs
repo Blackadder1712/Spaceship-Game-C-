@@ -6,10 +6,10 @@ using TMPro;
 [RequireComponent(typeof(Enemy))] //component gets added with script
 public class enemyHealth : MonoBehaviour
 {
-     int maxHitPoints = 5;
+     int maxHitPoints = 7;
 
     [Tooltip("Add amount to enemy heath")]
-     int difficultyRamp = 1;//enemy health increase
+     int difficultyRamp = 4;//enemy health increase
      int currentHitPoints = 0; //store hit points 
     
   

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/freddy shoot.unity
     guid: bd41ff5dd8731ac41b6d932d7a0d1b7a
   - enabled: 1
+    path: Assets/Scenes/BOSS.unity
+    guid: a45fe604ec4af41408066701cdc156be
+  - enabled: 1
     path: Assets/Scenes/golden.unity
     guid: 468646c346dc18648a5642f6d797c5f7
   - enabled: 1

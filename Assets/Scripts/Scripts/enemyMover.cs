@@ -7,7 +7,7 @@ using UnityEngine;
 public class enemyMover : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path = new List<Waypoint>();// array of waypoints
-    [SerializeField] [Range(0f, 5f)]float speed = 1f; //adjust enemy speed within limits
+    [SerializeField] [Range(0f, 5f)]float speed = 2f; //adjust enemy speed within limits
     Enemy enemy; // access enemy 
     void OnEnable()//call everytime enemy is called
     {   
