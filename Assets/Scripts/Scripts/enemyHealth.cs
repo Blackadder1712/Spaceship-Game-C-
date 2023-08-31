@@ -12,10 +12,13 @@ public class enemyHealth : MonoBehaviour
      int difficultyRamp = 4;//enemy health increase
      int currentHitPoints = 0; //store hit points 
     
-  
+
         
     Enemy enemy;
     // Start is called before the first frame update
+
+     [SerializeField] AudioClip enemyExplode;
+      AudioSource enemybang; // fail sound 
     void OnEnable() // fresh hitpoints 
     {
         currentHitPoints = maxHitPoints;
@@ -27,6 +30,7 @@ public class enemyHealth : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Enemy>(); // access enemy 
+        enemybang = GetComponent<AudioSource>();  
     }
 
     void OnParticleCollision(GameObject other)//when shot hits enemy
@@ -42,9 +46,12 @@ public class enemyHealth : MonoBehaviour
 
         if(currentHitPoints <= 0) //enemy dies when points hit 0
         {
+              enemybang.PlayOneShot(enemyExplode);
             gameObject.SetActive(false);
+           
             maxHitPoints += difficultyRamp;//increase enemy health
             enemy.RewardPizza(); //if enemy killed reward player pizzapoints
+
         }
          
      

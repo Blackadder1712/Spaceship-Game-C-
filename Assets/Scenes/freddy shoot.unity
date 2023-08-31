@@ -875,7 +875,7 @@ Transform:
   m_LocalScale: {x: 4.7862, y: 4.7862, z: 4.7862}
   m_Children: []
   m_Father: {fileID: 789846208}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &708743591
 ParticleSystemRenderer:
@@ -5804,9 +5804,7 @@ MonoBehaviour:
   head: {fileID: 1411565493}
   nozzle: {fileID: 1932510477}
   nute: {fileID: 342082096}
-  win: {fileID: 1508497729}
   mask: {fileID: 439943963}
-  winOne: {fileID: 818219852}
 --- !u!54 &789846212
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5944,19 +5942,9 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6470297102177761844, guid: 69c8ffcd3bcd81a4bbc6a22c5488405d, type: 3}
   m_PrefabInstance: {fileID: 716312043}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &818219852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1925148121395924627, guid: 4197a1c11d1454840aae9fa967237785, type: 3}
-  m_PrefabInstance: {fileID: 9156126760574207154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &909052970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4070072442774615834, guid: 4197a1c11d1454840aae9fa967237785, type: 3}
-  m_PrefabInstance: {fileID: 9156126760574207154}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &909052971 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4070072442774615813, guid: 4197a1c11d1454840aae9fa967237785, type: 3}
   m_PrefabInstance: {fileID: 9156126760574207154}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &909052974
@@ -5971,54 +5959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 909052971}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 1
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 1
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!1001 &972677752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6393,7 +6333,7 @@ Transform:
   m_LocalScale: {x: 4.7862, y: 4.7862, z: 4.7862}
   m_Children: []
   m_Father: {fileID: 789846208}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &1327411604
 ParticleSystemRenderer:
@@ -11471,11 +11411,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1508497729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6221472236000680120, guid: 4197a1c11d1454840aae9fa967237785, type: 3}
-  m_PrefabInstance: {fileID: 9156126760574207154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1536737940
 GameObject:
   m_ObjectHideFlags: 0

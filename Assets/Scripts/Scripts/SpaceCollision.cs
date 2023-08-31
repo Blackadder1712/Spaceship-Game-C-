@@ -14,9 +14,9 @@ public class SpaceCollision : MonoBehaviour
    public GameObject head;
    public GameObject nozzle;
    public GameObject nute;
-   public GameObject win;
+  
    public GameObject mask;
-     public GameObject winOne;
+
   
 
  
@@ -44,10 +44,9 @@ public class SpaceCollision : MonoBehaviour
         head.GetComponent<MeshRenderer>().enabled =false;
         nozzle.GetComponent<MeshRenderer>().enabled =false;
         nute.GetComponent<MeshRenderer>().enabled =false;
-        win.GetComponent<MeshRenderer>().enabled =false;
+      
         mask.GetComponent<MeshRenderer>().enabled =false;
-        winOne.GetComponent<MeshRenderer>().enabled =false;
-        
+   
        
          Invoke("ReloadLevel", loadDelay);
         
